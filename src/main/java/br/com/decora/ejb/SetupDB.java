@@ -21,7 +21,7 @@ public class SetupDB {
     @PostConstruct
     public void initDB(){
         try {
-            userDatastore.delete(User.class);
+            userDatastore.delete(userDatastore.createQuery(User.class));
 
             userDatastore.save(new User("admin", "admin1234", "admin"));
             userDatastore.save(new User("user", "user1234", "user"));

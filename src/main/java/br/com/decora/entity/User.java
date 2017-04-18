@@ -1,5 +1,6 @@
 package br.com.decora.entity;
 
+import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
@@ -7,7 +8,7 @@ import org.mongodb.morphia.annotations.Id;
 public class User {
 
     @Id
-    private Long id;
+    private ObjectId id;
     private String userName;
     private String password;
     private String userType;
@@ -45,11 +46,11 @@ public class User {
         this.userType = userType;
     }
 
-    public Long getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 }

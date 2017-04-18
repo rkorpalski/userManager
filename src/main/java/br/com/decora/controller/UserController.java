@@ -6,6 +6,7 @@ import br.com.decora.entity.User;
 import javax.inject.Inject;
 import java.util.List;
 
+
 public class UserController {
 
     @Inject
